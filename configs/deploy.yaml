@@ -1,0 +1,3 @@
+﻿# Deployment settings for rescue system
+device: ''
+export_format: onnx

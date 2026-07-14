@@ -1,0 +1,13 @@
+﻿ultralytics
+opencv-python
+numpy
+scipy
+matplotlib
+pandas
+jupyterlab
+notebook
+labelImg
+pyqt5
+lxml
+onnx
+onnxruntime

@@ -1,0 +1,6 @@
+﻿# YOLO settings for rescue system
+model: models/weights/yolov8n.pt
+imgsz: 640
+conf: 0.25
+iou: 0.45
+person_only: true

@@ -1,0 +1,11 @@
+﻿mode: detect
+source: 0
+model: models/weights/yolov8n.pt
+imgsz: 640
+conf: 0.25
+iou: 0.45
+device: ''
+save: ''
+mirror: false
+show_all: false
+person_only: true
