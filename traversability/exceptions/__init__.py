@@ -1,5 +1,6 @@
-"""Traversability 异常体系。"""
+"""Traversability ?????"""
 
+from traversability.exceptions.analyzer_exception import AnalyzerException
 from traversability.exceptions.grid_exception import GridException
 from traversability.exceptions.provider_exception import ProviderException
 from traversability.exceptions.traversability_exception import (
@@ -7,6 +8,7 @@ from traversability.exceptions.traversability_exception import (
 )
 
 __all__ = [
+    "AnalyzerException",
     "GridException",
     "ProviderException",
     "TraversabilityException",

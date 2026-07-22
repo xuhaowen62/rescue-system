@@ -1,0 +1,10 @@
+"""LiDAR ???????"""
+
+from traversability.features.base_feature import BaseFeatureExtractor
+
+
+class LiDARFeatureExtractor(BaseFeatureExtractor):
+    """?? LiDAR ???????????????"""
+
+
+LidarFeatureExtractor = LiDARFeatureExtractor

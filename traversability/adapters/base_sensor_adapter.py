@@ -1,0 +1,19 @@
+"""???????????"""
+
+from abc import ABC, abstractmethod
+
+from traversability.models import TraversabilityInput
+
+
+class BaseSensorAdapter(ABC):
+    """????????????????????"""
+
+    @abstractmethod
+    def get_input(self) -> TraversabilityInput:
+        """?????? TraversabilityInput?"""
+        raise NotImplementedError
+
+    @abstractmethod
+    def reset(self) -> None:
+        """????????"""
+        raise NotImplementedError

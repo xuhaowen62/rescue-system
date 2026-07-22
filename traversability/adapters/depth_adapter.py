@@ -1,0 +1,10 @@
+"""???????????"""
+
+from traversability.adapters.base_sensor_adapter import BaseSensorAdapter
+
+
+class DepthSensorAdapter(BaseSensorAdapter):
+    """????????? Traversability ????"""
+
+
+DepthAdapter = DepthSensorAdapter
