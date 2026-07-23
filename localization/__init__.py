@@ -29,6 +29,8 @@ from localization.interfaces import (
     BasePlanningAdapter,
     BasePoseProvider,
     BaseSensorProvider,
+    LocalizationPlanningAdapter,
+    LocalizationTraversabilityAdapter,
 )
 from localization.core import LocalizationStatus
 from localization.manager import LocalizationManager
@@ -67,6 +69,8 @@ __all__ = [
     "LioSAMBackend",
     "LidarConfig",
     "LocalizationConfig",
+    "LocalizationPlanningAdapter",
+    "LocalizationTraversabilityAdapter",
     "LocalizationManager",
     "LocalizationStatus",
     "MockLocalizationAdapter",

@@ -8,6 +8,7 @@ from localization.backends.base_backend import BaseLocalizationBackend
 from localization.exceptions import LocalizationException, PoseException
 from localization.interfaces import BasePoseProvider, BaseSensorProvider
 from localization.models import PoseEstimate, PoseState, SensorData
+from localization.utils.transform import Transform
 
 
 class LocalizationManager:
@@ -137,6 +138,26 @@ class LocalizationManager:
             self._pose_estimate.copy()
             if self._pose_estimate is not None
             else None
+        )
+
+    def get_current_pose(self) -> Optional[PoseEstimate]:
+        """返回当前统一位姿估计，不暴露具体定位算法实现。"""
+        return self.get_pose_estimate()
+
+    def get_localization_state(self) -> str:
+        """返回当前定位状态。"""
+        return self.get_status()
+
+    def get_transform(self) -> Optional[Transform]:
+        """返回 MAP 到当前位姿参考坐标系的变换。"""
+        estimate = self.get_current_pose()
+        if estimate is None:
+            return None
+        return Transform(
+            parent_frame="map",
+            child_frame=estimate.frame_id,
+            translation=estimate.position,
+            rotation=estimate.orientation_quaternion,
         )
 
     def update_pose(
